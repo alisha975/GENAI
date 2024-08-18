@@ -11,9 +11,11 @@ FEATURES
 
 
 INSTALLATION
-1.clone the Repository: git clone https://github.com
+1.clone the Repository: 
+          1.git clone https://github.com/alisha975/GENAI.git
+          2.cd RAG_WITH_AZURE
 2.Set UP a Virtual Environment:
-  command: 1.python -m venv env
+           1.python -m venv env
            2.venv\Scripts\activate
 
 3.Instqall dependencies: pip install -r requirements.txt
