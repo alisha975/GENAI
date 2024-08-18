@@ -1,4 +1,6 @@
 #RAG-POWERED PDF Q&A APP
+
+
 This project is a Retrieval-Augumented Generation(RAG) built uisng AZURE OpenAI and Streamlit. This app allows users to upload a theory PDF(up to 200 MB) and asked question related to the content of that PDF.
 This app will then provide responses based on the content of the uploaded document.
 
