@@ -11,6 +11,7 @@ FEATURES
 
 
 INSTALLATION
+
 1.clone the Repository: 
           1.git clone https://github.com/alisha975/GENAI.git
           2.cd RAG_WITH_AZURE
