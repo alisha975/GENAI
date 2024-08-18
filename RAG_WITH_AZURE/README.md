@@ -29,7 +29,12 @@ INSTALLATION
 
           pip install -r requirements.txt
 
-4.Set Up Azure OPENAI environment
+4.Set Up Azure OPENAI environment just change your own credential and paste in code azure.py
+
+          os.environ["AZURE_OPENAI_API_KEY"] = "XXX YOUR AZURE API KEY XXXX"
+          os.environ["AZURE_OPENAI_ENDPOINT"] = "XXX YOUR AZURE ENDPOINT XXX"
+          os.environ["AZURE_OPENAI_API_VERSION"] = "XXX YOUR AZURE API VERSION XXX"
+          os.environ["AZURE_OPENAI_CHAT_DEPLOYMENT_NAME"] = "XXX YOUR AZURE DEPLOYMENT NAME"
 
 5.Run the APP: 
 
