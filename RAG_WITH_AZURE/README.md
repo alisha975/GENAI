@@ -25,7 +25,7 @@ INSTALLATION
            
            venv\Scripts\activate
 
-3.Instqall dependencies: 
+3.Install dependencies: 
 
           pip install -r requirements.txt
 
