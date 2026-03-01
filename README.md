@@ -32,13 +32,7 @@ Follow these steps to get the application running locally for development and te
 -   **Azure OpenAI Configuration**: The backend agent requires Azure OpenAI credentials.
     1.  Navigate to the `backend/` directory.
     2.  Create a file named `.env` by copying the `backend/.env.example` file.
-    3.  Open the `.env` file and add your Azure OpenAI credentials:
-        ```
-        OPENAI_API_KEY=your_azure_openai_api_key
-        OPENAI_API_VERSION=2024-10-01-preview
-        OPENAI_AZURE_ENDPOINT=your_azure_openai_endpoint
-        OPENAI_DEPLOYMENT_NAME=gpt-4o-mini
-        ```
+    3.  Open the `.env` file and add your Azure OpenAI credentials as shown in the template.
 
 **2. Install Dependencies:**
 
