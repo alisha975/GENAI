@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: fullstack-langgraph-app
+    image: fullstack-langgraph-app:latest
+    ports:
+      - "2024:8000"  # LangGraph API backend on port 8000
+      - "5173:5173"  # Frontend dev server or static server on port 5173
+    environment:
+      - AZURE_OPENAI_API_KEY=${AZURE_OPENAI_API_KEY}
+      - AZURE_OPENAI_ENDPOINT=${AZURE_OPENAI_ENDPOINT}
+      - AZURE_API_VERSION=${AZURE_API_VERSION:-2024-10-01-preview}
+      - AZURE_DEPLOYMENT_NAME=${AZURE_DEPLOYMENT_NAME:-gpt-4o-mini}
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ./backend:/deps/backend
+      - ./frontend/dist:/deps/frontend/dist
+    networks:
+      - fullstack-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+networks:
+  fullstack-network:
+    driver: bridge
+
+volumes: {}
