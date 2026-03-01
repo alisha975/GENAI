@@ -3,8 +3,7 @@ import { InputForm } from "./InputForm";
 interface WelcomeScreenProps {
   handleSubmit: (
     submittedInputValue: string,
-    effort: string,
-    model: string
+    effort: string
   ) => void;
   onCancel: () => void;
   isLoading: boolean;
@@ -33,7 +32,7 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({
       />
     </div>
     <p className="text-xs text-neutral-500">
-      Powered by Google Gemini and LangChain LangGraph.
+      Powered by Azure OpenAI and LangChain LangGraph.
     </p>
   </div>
 );
